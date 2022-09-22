@@ -3,7 +3,7 @@
     <head>
   <!-- 元数据 -->
   <meta charset="utf-8">
-  <link rel="icon" href="/images/profile_photo.png">
+  <link rel="icon" href="/images/profile_photo.jpg">
   
   <title>分类 | Sesame&#39;s leanring Blog</title>
   <meta name="author" content="sesame" />
@@ -23,10 +23,10 @@
 <meta property="og:site_name" content="Sesame&#39;s leanring Blog">
 <meta property="og:description" content="sesame">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images/profile_photo.png">
+<meta property="og:image" content="http://example.com/images/profile_photo.jpg">
 <meta property="article:author" content="sesame">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/profile_photo.png">
+<meta name="twitter:image" content="http://example.com/images/profile_photo.jpg">
   
   <!-- 站点验证相关 -->
   
@@ -41,7 +41,7 @@
     <script src="/js/kr-dark.min.js"></script>
   
   
-    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" media="all"></script>
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/light.min.css" media="all"></script>
   
   
   <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></script>
@@ -62,7 +62,7 @@
   <style>
     
       .kratos-cover.kratos-cover-2 {
-        background-image: url('/images/banner_dark.webp');
+        background-image: url('/images/wallpaper-878514.jpg');
       }
     
     
@@ -426,6 +426,11 @@
     window.kr.siteRoot = "/";
 </script>
 
+    <div>
+        <canvas id="snow"></canvas>
+        <script async src="/js/snow.min.js"></script>
+    </div>
+
 
     <script async src="/js/candy.min.js"></script>
 
@@ -456,5 +461,20 @@
 <!-- Extra support for third-party plguins  -->
 
 
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
