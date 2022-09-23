@@ -16,16 +16,16 @@
   
     <meta name="keywords" content="ML" />
   
-  <meta name="description" content="概率论1.极大似然估计MLE利用已知的样本结果信息，反推最具有可能（最大概率）导致这些样本结果出现的模型参数值前提：满足独立同分布\  对于这个函数：p(x \mid \theta) 其中 x 表示 具体数据 \theta 表示模型参数如果 \theta 是已知确定的，x是变量，这个函数叫做  概率函数(probability function)，它描述对于不同的样本点  ，其出现概率是多少。如果">
+  <meta name="description" content="概率论1.极大似然估计MLE利用已知的样本结果信息，反推最具有可能（最大概率）导致这些样本结果出现的模型参数值前提：满足独立同分布\  对于这个函数：p(x \mid \theta) 其中 $ x $ 表示 具体数据 $ \theta $ 表示模型参数如果 $ \theta $ 是已知确定的，x是变量，这个函数叫做  概率函数(probability function)，它描述对于不同的样本点">
 <meta property="og:type" content="article">
 <meta property="og:title" content="statistics">
 <meta property="og:url" content="http://example.com/2022/09/21/statistics/index.html">
 <meta property="og:site_name" content="Sesame&#39;s leanring Blog">
-<meta property="og:description" content="概率论1.极大似然估计MLE利用已知的样本结果信息，反推最具有可能（最大概率）导致这些样本结果出现的模型参数值前提：满足独立同分布\  对于这个函数：p(x \mid \theta) 其中 x 表示 具体数据 \theta 表示模型参数如果 \theta 是已知确定的，x是变量，这个函数叫做  概率函数(probability function)，它描述对于不同的样本点  ，其出现概率是多少。如果">
+<meta property="og:description" content="概率论1.极大似然估计MLE利用已知的样本结果信息，反推最具有可能（最大概率）导致这些样本结果出现的模型参数值前提：满足独立同分布\  对于这个函数：p(x \mid \theta) 其中 $ x $ 表示 具体数据 $ \theta $ 表示模型参数如果 $ \theta $ 是已知确定的，x是变量，这个函数叫做  概率函数(probability function)，它描述对于不同的样本点">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/profile_photo.jpg">
 <meta property="article:published_time" content="2022-09-21T07:48:38.000Z">
-<meta property="article:modified_time" content="2022-09-22T10:26:53.557Z">
+<meta property="article:modified_time" content="2022-09-23T09:27:22.031Z">
 <meta property="article:author" content="sesame">
 <meta property="article:tag" content="ML">
 <meta name="twitter:card" content="summary">
@@ -209,7 +209,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        752
+                        ~1.93K
                     
                     字
                 </li>
@@ -220,14 +220,14 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1663842413557"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1663925242031"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             <hr />
             <div itemprop="articleBody"><h2><span id="概率论">概率论</span></h2><h3><span id="1极大似然估计mle">1.极大似然估计MLE</span></h3><p>利用已知的样本结果信息，反推最具有可能（最大概率）导致这些样本结果出现的模型参数值<br>前提：满足独立同分布\</p>
 <ul>
-<li><p>对于这个函数：<script type="math/tex">p(x \mid \theta)</script> 其中 <script type="math/tex">x</script> 表示 具体数据 <script type="math/tex">\theta</script> 表示模型参数<br>如果 <script type="math/tex">\theta</script> 是已知确定的，<script type="math/tex">x</script>是变量，这个函数叫做 <strong> 概率函数(probability function)</strong>，它描述对于不同的样本点  ，其出现概率是多少。<br>如果 <script type="math/tex">x</script> 是已知确定的，<script type="math/tex">\theta</script> 是变量，这个函数叫做 <strong> 似然函数(likelihood function) </strong>, 它描述对于不同的模型参数，出现  这个样本点的概率是多少。</p>
+<li><p>对于这个函数：<script type="math/tex">p(x \mid \theta)</script> 其中 $ x $ 表示 具体数据 $ \theta $ 表示模型参数<br>如果 $ \theta $ 是已知确定的，<script type="math/tex">x</script>是变量，这个函数叫做 <strong> 概率函数(probability function)</strong>，它描述对于不同的样本点  ，其出现概率是多少。<br>如果 $ x $ 是已知确定的，<script type="math/tex">\theta</script> 是变量，这个函数叫做 <strong> 似然函数(likelihood function) </strong>, 它描述对于不同的模型参数，出现  这个样本点的概率是多少。</p>
 </li>
 <li><p>e.g.<br>1.有一个罐子，里面有黑白两种颜色的球，数目多少不知，两种颜色的比例也不知。想知道罐中白球和黑球的比例<br>前面的一百次重复记录中，有七十次是白球，请问罐中白球所占的比例最有可能是多少?</p>
 <ul>
@@ -243,6 +243,23 @@
 </li>
 </ul>
 <p>那么既然事情已经发生了，为什么不让这个出现的结果的可能性最大呢？这也就是最大似然估计的核心。</p>
+<h3><span id="贝叶斯和最大后验map">贝叶斯和最大后验MAP</span></h3><ul>
+<li><h4><span id="贝叶斯公式">贝叶斯公式</span></h4><script type="math/tex; mode=display">
+  \mathrm{P}(\mathrm{A} \mid \mathrm{B})=\frac{\mathrm{P}(\mathrm{B} \mid \mathrm{A}) \mathrm{P}(\mathrm{A})}{\mathrm{P}(\mathrm{B})}</script><p>  将  $P(B)$  用全概率公式展开</p>
+<script type="math/tex; mode=display">
+  \mathrm{P}(\mathrm{A} \mid \mathrm{B})=\frac{\mathrm{P}(\mathrm{B} \mid \mathrm{A}) \mathrm{P}(\mathrm{A})}{\mathrm{P}(\mathrm{B} \mid \mathrm{A}) \mathrm{P}(\mathrm{A})+\mathrm{P}(\mathrm{B} \mid \sim \mathrm{A}) \mathrm{P}(\sim \mathrm{A})}</script></li>
+</ul>
+<p>其中 $ P(A) $ 为先验，为已知值。<br>对于投硬币的例子来看，我们认为（”先验地知道“）θ \thetaθ取0.5的概率很大，取其他值的概率小一些。可以用一个高斯分布来具体描述这个先验知识，例如假设 $P(\theta)$ 为均值0.5，方差0.1的高斯函数，<br>$ P(B \mid A)$ 称似然函数<br>$P(A \mid B)$ 称为后验</p>
+<ul>
+<li>最大后验估计MAP<br>  其中分母为已知值（这是一个可以由数据集得到的值），$P(\theta)$ 也已知，MAP于MLE的区别就是MAP多乘了一个先验$P(\theta)$</li>
+</ul>
+<ul>
+<li><p>朴素贝叶斯<br>  给定训练数据集，其中每个样本x都包括n维特征 $x=\left(x_1, x_2, \cdots, x_n\right)$，类标记集合含有k种类别，即 $y=\left(y_1, y_2, \cdots, y_n\right)$<br>  此时的后验记为</p>
+<script type="math/tex; mode=display">
+  P\left(y_k \mid x\right)=\frac{P\left(x \mid y_k\right) \times P\left(y_k\right)}{\sum_k P\left(x \mid y_k\right) \times P\left(y_k\right)}</script><p>  朴素贝叶斯算法对条件概率分布作出了独立性的假设，通俗地讲就是说假设各个维度的特征 $ {x_1},{x_2}, \cdots ,{x_n} $ 互相独立，<br>  所以分子分母的条件概率都能改写为</p>
+<script type="math/tex; mode=display">
+  P\left(x \mid y_k\right)=P\left(x_1, x_2, \cdots, x_n \mid y_k\right)=\prod_{i=1}^n P\left(x_i \mid y_k\right)</script></li>
+</ul>
 </div>
         </div>
         
@@ -312,7 +329,7 @@
             const title         = "「statistics」";
             const excerpt       = `概率论1.极大似然估计MLE利用已知的样本结果信息，反推最具有可能（最大概率）导致这些样本结果出现的模型参数值前提：满足独立同分布\
 
-对于这个函数：p(x \mid \theta) 其中 x 表示 具体数据 \theta 表示模型参...`;
+对于这个函数：p(x \mid \theta) 其中 $ x $ 表示 具体数据 $ \theta...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -334,7 +351,7 @@
                     <a class="tag-none-link" href="/tags/ML/" rel="tag">ML</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-09-22T10:26:53.557Z" itemprop="dateModified">最后编辑：2022-09-22</time>
+                    <time datetime="2022-09-23T09:27:22.031Z" itemprop="dateModified">最后编辑：2022-09-23</time>
                 </div>
             </div>
         </footer>
